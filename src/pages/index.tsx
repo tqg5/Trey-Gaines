@@ -1,8 +1,13 @@
 import React from 'react';
-import Header from 'components/Header';
+import Content from 'components/Content';
+import Menu from 'components/Menu';
+import Wrapper from './Wrapper';
 
 export default function Home() {
   return (
-    <Header />
+    <Wrapper>
+      <Content />
+      <Menu />
+    </Wrapper>
   )
 }

@@ -13,9 +13,10 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          'components': path.resolve(__dirname, 'src/components')
+          'components': path.resolve(__dirname, 'src/components'),
+          'images': path.resolve(__dirname, 'src/images')
         },
-        extensions: []
+        extensions: [ 'jpeg' ]
       }
     }
   ]
