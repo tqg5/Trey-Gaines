@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "lint": "eslint --ext .js,.ts,.tsx"
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
@@ -23,10 +24,13 @@
     "reakit": "^1.3.7"
   },
   "devDependencies": {
-    "@emotion/babel-preset-css-prop": "^11.2.0",
     "@emotion/babel-plugin": "^11.3.0",
+    "@emotion/babel-preset-css-prop": "^11.2.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
     "babel-preset-gatsby": "^1.3.0",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "typescript": "^4.2.4"
   },
   "repository": {
     "type": "git",
