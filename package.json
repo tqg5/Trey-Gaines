@@ -24,8 +24,8 @@
     "reakit": "^1.3.7"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.13.13",
     "@emotion/babel-plugin": "^11.3.0",
-    "@emotion/babel-preset-css-prop": "^11.2.0",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
     "babel-preset-gatsby": "^1.3.0",

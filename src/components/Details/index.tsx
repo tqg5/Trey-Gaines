@@ -1,7 +1,7 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import Wrapper from './Wrapper';
 
-export default () => {
+export default (): ReactElement => {
     return (
         <Wrapper>
             Content

@@ -1,8 +1,4 @@
-import React from 'react';
+import { ReactElement } from 'react';
 import Entry from 'components/Entry';
 
-export default function Home() {
-  return (
-    <Entry />
-  )
-}
+export default (): ReactElement => <Entry />;

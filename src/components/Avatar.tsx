@@ -1,6 +1,9 @@
-import React from 'react';
-import Avatar from 'images/Avatar.jpeg';
-import { css, jsx } from '@emotion/react'
+import {
+    FC,
+    ReactElement
+} from 'react';
+import AvatarImg from 'images/Avatar.jpeg';
+import { css } from '@emotion/react'
 
 const cssObj = css`
     border-radius: 50%;
@@ -8,6 +11,9 @@ const cssObj = css`
     height: 150px;
 `;
 
-export default () => (
-    <img css={cssObj} src={Avatar} />
+const Avatar: FC = (): ReactElement => (
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    <img css={cssObj} src={AvatarImg} />
 );
+
+export default Avatar;
