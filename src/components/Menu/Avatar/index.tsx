@@ -2,6 +2,7 @@ import {
     FC,
     ReactElement
 } from 'react';
+import Wrapper from './Wrapper';
 import AvatarImg from 'images/Avatar.jpeg';
 import { css } from '@emotion/react'
 
@@ -12,8 +13,9 @@ const cssObj = css`
 `;
 
 const Avatar: FC = (): ReactElement => (
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    <img css={cssObj} src={AvatarImg} />
+    <Wrapper>
+        <img css={cssObj} src={AvatarImg} />
+    </Wrapper>
 );
 
 export default Avatar;

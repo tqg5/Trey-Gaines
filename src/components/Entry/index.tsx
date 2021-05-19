@@ -9,10 +9,10 @@ import './index.css';
 export default (): ReactElement => (
   <AppWrapper>
       <Wrapper>
-          <ContentWrapper>
-              <Details />
-              <Menu />
-          </ContentWrapper>
+        <ContentWrapper>
+            <Details />
+            <Menu />
+        </ContentWrapper>
     </Wrapper>
   </AppWrapper>
 )
