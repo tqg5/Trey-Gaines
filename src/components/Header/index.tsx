@@ -1,17 +1,7 @@
 import { ReactElement } from 'react';
-import { CSSObject } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export default (): ReactElement => {
-    /*
-    const buttonCss = (): CSSObject => ({
-        backgroundColor: 'hotpink',
-        '&:hover': {
-            color: 'lightgreen'
-        }
-    });
-    */
-
     const Background = styled.div`
         background-color: black;
         display: flex;

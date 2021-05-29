@@ -14,7 +14,8 @@ module.exports = {
       options: {
         alias: {
           'components': path.resolve(__dirname, './src/components'),
-          'images': path.resolve(__dirname, './src/images')
+          'images': path.resolve(__dirname, './src/images'),
+          'helpers': path.resolve(__dirname, './src/helpers')
         },
         extensions: [ '.jpeg', '.ts', '.tsx' ]
       }

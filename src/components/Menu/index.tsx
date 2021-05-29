@@ -1,8 +1,7 @@
 import {
     ReactElement,
     FC,
-    useMemo,
-    useState
+    useMemo
 } from 'react';
 import Avatar from 'components/Menu/Avatar';
 import Wrapper from './Wrapper';
@@ -23,8 +22,13 @@ interface ButtonFactoryProps {
     text: BUTTON_NAMES;
     faObject: IconDefinition;
     isActive: boolean;
-    setActiveButtonName: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>;
+    onClick: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>;
 };
+
+interface MenuProps {
+    activeButtonName: BUTTON_NAMES;
+    onClick: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>;
+}
 
 export enum BUTTON_NAMES {
     HOME = 'Home',
@@ -61,31 +65,30 @@ const buttonFactory = ({
     text,
     faObject,
     isActive,
-    setActiveButtonName
+    onClick
 }: ButtonFactoryProps) => <Button
     text={text}
     faObject={faObject}
     isActive={isActive}
-    onClick={setActiveButtonName}
+    onClick={onClick}
 />;
 
-const createButtons = (activeButtonName: BUTTON_NAMES, setActiveButtonName: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>) => {
+const createButtons = (activeButtonName: BUTTON_NAMES, onClick: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>) => {
     const buttons = [];
 
     for(const obj of Object.values(buttonConfig)) {
         buttons.push(buttonFactory({
             ...obj,
             isActive: activeButtonName === obj.text,
-            setActiveButtonName
+            onClick
         }));
     }
 
     return buttons;
 }
 
-const Menu: FC = (): ReactElement => {
-    const [ activeButtonName, setActiveButtonName ] = useState(BUTTON_NAMES.HOME);
-    const buttons = useMemo(() => createButtons(activeButtonName, setActiveButtonName), [ activeButtonName ]);
+const Menu: FC<MenuProps> = ({ activeButtonName, onClick }): ReactElement => {
+    const buttons = useMemo(() => createButtons(activeButtonName, onClick), [ activeButtonName ]);
 
     return (
         <Wrapper>
