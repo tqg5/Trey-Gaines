@@ -6,4 +6,5 @@ import styled from '@emotion/styled';
 
 export default styled.div`
     height: 100%;
+    background-color: #2c2d30;
 `;

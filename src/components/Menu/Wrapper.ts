@@ -4,8 +4,6 @@ export default styled.div`
     display: flex;
     flex: 1;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid black;
-    background-color: #2c2d30;
+    box-shadow: 3px 3px 3px #202125, -3px -3px 3px #353535;
+    border-radius: 2rem;
 `;

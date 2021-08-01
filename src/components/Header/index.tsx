@@ -10,7 +10,6 @@ export default (): ReactElement => {
     `;
 
     const Title = styled.span`
-        color: white;
         font-size: 1em;
         padding: 10px;
     `;

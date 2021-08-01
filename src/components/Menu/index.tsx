@@ -8,7 +8,7 @@ import Wrapper from './Wrapper';
 import NameTitleContainer from './NameTitleContainer';
 import Name from './Name';
 import Title from './Title';
-import Button from './Button';
+import Button from 'components/Button';
 import {
     faHome,
     faUser,
@@ -17,6 +17,7 @@ import {
     faCamera,
     IconDefinition
 } from '@fortawesome/free-solid-svg-icons';
+import ButtonWrapper from './ButtonWrapper';
 
 interface ButtonFactoryProps {
     text: BUTTON_NAMES;
@@ -28,7 +29,7 @@ interface ButtonFactoryProps {
 interface MenuProps {
     activeButtonName: BUTTON_NAMES;
     onClick: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>;
-}
+};
 
 export enum BUTTON_NAMES {
     HOME = 'Home',
@@ -66,12 +67,14 @@ const buttonFactory = ({
     faObject,
     isActive,
     onClick
-}: ButtonFactoryProps) => <Button
-    text={text}
-    faObject={faObject}
-    isActive={isActive}
-    onClick={onClick}
-/>;
+}: ButtonFactoryProps) => <ButtonWrapper>
+    <Button
+        text={text}
+        faObject={faObject}
+        isActive={isActive}
+        onClick={() => onClick(text)}
+    />
+</ButtonWrapper>
 
 const createButtons = (activeButtonName: BUTTON_NAMES, onClick: React.Dispatch<React.SetStateAction<BUTTON_NAMES>>) => {
     const buttons = [];

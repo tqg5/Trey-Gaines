@@ -21,6 +21,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "axios": "^0.21.1",
     "gatsby": "^3.2.1",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "react": "^17.0.1",
